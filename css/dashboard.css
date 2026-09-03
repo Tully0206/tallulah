@@ -1,0 +1,240 @@
+/* Dashboard — área privada del cliente */
+.dashboard-main {
+    min-height: calc(100vh - 75px);
+    background: #FDF8F2;
+}
+
+/* Desactiva el cursor personalizado en el área privada */
+body, *, *::before, *::after { cursor: auto !important; }
+a, button, select, [onclick]  { cursor: pointer !important; }
+
+/* Hero — saludo y botón de cerrar sesión */
+.dashboard-hero {
+    background: transparent;
+    position: relative;
+    padding: 60px 48px 32px;
+}
+
+.dashboard-hero h1 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1A1A1A;
+    margin: 0 0 8px;
+}
+
+.dashboard-hero h1 em {
+    color: #2E6B3E;
+    font-style: normal;
+}
+
+.dashboard-hero p {
+    font-size: 14px;
+    color: rgba(26,26,26,.55);
+}
+
+/* Botón cerrar sesión — posicionado a la derecha del saludo */
+.dash-logout-btn {
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #9A9087;
+    text-decoration: none;
+    padding: 7px 14px;
+    border: 1px solid #E4DDD4;
+    border-radius: 8px;
+    background: #fff;
+    transition: all .12s;
+    white-space: nowrap;
+    position: absolute;
+    right: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dash-logout-btn:hover {
+    background: #F7F4EF;
+    color: #1A1A1A;
+    border-color: #ccc5bb;
+}
+
+/* Grid de tarjetas */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    padding: 0 48px 48px;
+}
+
+/* Tarjeta */
+.dash-card {
+    background: #FFFFFF;
+    border: 1px solid #E4DDD4;
+    border-radius: 12px;
+    padding: 28px;
+}
+
+.dash-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(26,26,26,.08);
+}
+
+.dash-card-header h2 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1A1A1A;
+    margin: 0;
+}
+
+.dash-empty {
+    font-size: 14px;
+    color: rgba(26,26,26,.4);
+    font-style: italic;
+}
+
+/* Lista de mascotas */
+.mascotas-list { display: flex; flex-direction: column; gap: 12px; }
+
+.mascota-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0ebe3;
+}
+
+.mascota-item:last-child { border-bottom: none; }
+
+.mascota-info { display: flex; flex-direction: column; gap: 2px; }
+.mascota-info strong { font-size: 14px; font-weight: 700; }
+.mascota-info span   { font-size: 12px; color: rgba(26,26,26,.5); text-transform: capitalize; }
+
+/* Botón editar mascota alineado a la derecha */
+.btn-editar-mascota { margin-left: auto; }
+
+/* Formulario de edición de mascota — oculto por defecto */
+.mascota-edit-form {
+    display: none;
+    background: #fdf8f2;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 8px;
+}
+
+.edit-mascota-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+/* Lista de reservas */
+.reservas-list { display: flex; flex-direction: column; gap: 12px; }
+
+.reserva-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px;
+    background: #FDF8F2;
+    border: 1px solid rgba(26,26,26,.08);
+    border-radius: 8px;
+}
+
+/* Badge de estado de reserva */
+.reserva-estado {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.estado-pendiente  { background: #F5E6A0; color: #1A1A1A; }
+.estado-confirmada { background: #C9DEC6; color: #1A1A1A; }
+.estado-completada { background: #C8E6F5; color: #1A1A1A; }
+.estado-cancelada  { background: #fde0e0; color: #c0392b; }
+
+.reserva-info { display: flex; flex-direction: column; gap: 2px; }
+.reserva-info strong { font-size: 14px; font-weight: 700; }
+.reserva-info span   { font-size: 12px; color: rgba(26,26,26,.5); }
+
+/* Datos del cliente */
+.datos-list { display: flex; flex-direction: column; gap: 12px; }
+
+.dato-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(26,26,26,.06);
+}
+
+.dato-item:last-child { border-bottom: none; }
+
+.dato-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(26,26,26,.4);
+}
+
+.dato-item span:last-child { font-size: 14px; }
+
+/* Formulario de edición inline en las tarjetas */
+.exp-form  { display: flex; flex-direction: column; gap: 0; }
+.exp-row   { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+.exp-group { flex: 1; min-width: 150px; display: flex; flex-direction: column; gap: 4px; }
+
+.exp-group label {
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(26,26,26,.6);
+}
+
+.exp-group input,
+.exp-group select,
+.exp-group textarea {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: .9rem;
+    background: #fff;
+    width: 100%;
+}
+
+.btn-exp-save {
+    align-self: flex-start;
+    background: #1A1A1A;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: .88rem;
+    font-weight: 600;
+}
+
+.btn-exp-save:hover { background: #333; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dashboard-hero  { padding: 32px 24px 24px; }
+    .dashboard-grid  { padding: 0 24px 32px; }
+    .dash-logout-btn { position: static; margin-top: 16px; display: inline-block; }
+}
