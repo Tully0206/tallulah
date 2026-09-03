@@ -1,0 +1,133 @@
+/* Login */
+.login-main {
+    min-height: calc(100vh - 125px); /* ocupa toda la pantalla menos el nav */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    background: #FFFFFF;
+    border: 2px solid #1A1A1A;
+    border-radius: 2px;
+    box-shadow: 6px 6px 0 #C9B1E8;
+    padding: 48px 40px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.login-logo {
+    font-family: 'Abril Fatface', serif;
+    font-size: 44px;
+    color: #1A1A1A;
+    display: block;
+    margin-bottom: 8px;
+    transition: color .2s;
+}
+
+.login-logo:hover { color: #e97b06; }
+
+.login-sub {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgba(26, 26, 26, .4);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 13px;
+    color: rgba(26, 26, 26, .5);
+}
+
+.login-footer a {
+    color: #2E6B3E;
+    font-weight: 700;
+    transition: color .2s;
+}
+
+.login-footer a:hover { color: #e87fab; }
+
+/* Registro */
+.registro-main {
+    min-height: calc(100vh - 125px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.registro-card {
+    width: 100%;
+    max-width: 560px;
+    background: #FFFFFF;
+    border: 2px solid #1A1A1A;
+    border-radius: 2px;
+    box-shadow: 6px 6px 0 #C9B1E8;
+    padding: 48px 40px;
+}
+
+.registro-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.registro-logo {
+    font-family: 'Abril Fatface', serif;
+    font-size: 44px;
+    color: #1A1A1A;
+    display: block;
+    margin-bottom: 8px;
+    transition: color .2s;
+}
+
+.registro-logo:hover { color: #e97b06; }
+
+.registro-sub {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgba(26, 26, 26, .4);
+}
+
+.registro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.registro-footer {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 13px;
+    color: rgba(26, 26, 26, .5);
+}
+
+.registro-footer a {
+    color: #2E6B3E;
+    font-weight: 700;
+    transition: color .2s;
+}
+
+.registro-footer a:hover { color: #e87fab; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-card,
+    .registro-card { padding: 32px 24px; }
+}
