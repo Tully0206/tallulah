@@ -1,0 +1,71 @@
+/* Legal — compartido entre privacidad y aviso legal */
+.legal-main {
+    min-height: calc(100vh - 75px);
+    background: #FDF8F2;
+}
+
+.legal-wrap {
+    max-width: 720px;
+    padding: 60px 48px;
+    margin: 0;
+}
+
+.page-title {
+    font-family: "DM Sans", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1A1A1A;
+    margin: 0 0 6px;
+}
+
+.page-title em {
+    color: #2E6B3E;
+    font-style: normal;
+}
+
+.page-sub {
+    font-size: 13px;
+    color: rgba(26,26,26,.4);
+    margin: 0 0 48px;
+    font-style: italic;
+}
+
+.legal-seccion {
+    margin-bottom: 36px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid #E4DDD4;
+}
+
+.legal-seccion:last-of-type { border-bottom: none; }
+
+.legal-seccion h2 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1A1A1A;
+    margin: 0 0 12px;
+}
+
+.legal-seccion p {
+    font-size: 14px;
+    line-height: 1.9;
+    color: rgba(26,26,26,.7);
+}
+
+.legal-seccion a {
+    color: #2E6B3E;
+    font-weight: 600;
+    transition: color .2s;
+}
+
+.legal-seccion a:hover { color: #e87fab; }
+
+.legal-volver { padding-top: 8px; }
+
+@media (max-width: 768px) {
+    .legal-wrap { padding: 40px 24px; }
+}
